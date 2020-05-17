@@ -1,0 +1,33 @@
+<%- include("partials/header") %>
+    
+    <div class="text-center">
+        <h1 class="my-5">Add new Camp!</h1>
+        
+        <form action="/campgrounds" method="POST">
+            <div class="form-row justify-content-around">
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" name="name" placeholder="e.g. camp five" required>
+                </div>
+            </div>
+            <div class="form-row justify-content-around">
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" placeholder="e.g. http://www.google.com" name="image" required>
+                </div>
+            </div>
+            <div class="form-row justify-content-around">
+                <div class="form-group col-md-4">
+                    <button class="btn btn-primary" style="width: 100%;" type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+        
+        <p>
+            <a href="/">GO BACK</a>
+        </p>
+        
+        <p>
+            <a href="/campgrounds">View Campgrounds</a>
+        </p>
+    </div>
+
+<%- include("partials/footer") %>
