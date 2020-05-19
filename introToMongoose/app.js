@@ -19,19 +19,19 @@ var Cat=mongoose.model("Cat",catSchema);
 
 // adding  a new cat to database
 
-// Cat.create({
-//     name:"Snowhite",
-//     age:15,
-//     temperament:"bland"
-// },function (err,cat) {
-//     if(err){
-//         console.log("something went wrong");
-//     }
-//     else{
-//         console.log("added ");
-//         console.log(cat);
-//     }
-// });
+Cat.create({
+    name:"Snowhite",
+    age:15,
+    temperament:"bland"
+},function (err,cat) {
+    if(err){
+        console.log("something went wrong");
+    }
+    else{
+        console.log("added ");
+        console.log(cat);
+    }
+});
 // var george=new Cat({
 //     name:"Mrs.Norris",
 //     age:7,

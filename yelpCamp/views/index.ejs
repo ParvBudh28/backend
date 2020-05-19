@@ -23,6 +23,9 @@
                         <%= campgrounds[i].name %>
                     </h4>
                 </div>
+                <a href="/campgrounds/<%= campgrounds[i]._id %>" class="text-center mb-4">
+                    <button type="button" class="btn btn-outline-primary">Read More</button>
+                </a>
             </div>
         </div>
         <% } %>
