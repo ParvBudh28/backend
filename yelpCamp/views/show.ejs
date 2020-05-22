@@ -14,4 +14,16 @@
     <a href="/campgrounds" class="btn btn-primary">View Campgrounds</a>
 </p>
 
+<p>
+    <h4>Comments:</h4>
+    <% campground.comments.forEach(function(comment){ %>
+        <p>
+            <%= comment.text %> -
+            <strong>
+                <%= comment.author %>
+            </strong>
+        </p>
+    <% }); %>
+</p>
+
 <%- include("partials/footer") %>
