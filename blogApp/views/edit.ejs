@@ -1,0 +1,38 @@
+<%- include("./partials/header") %>
+<div class="container-fluid pt-5">
+    <div class="container text-center" id="newPost">
+        <h1 class="mb-3">Edit Post</h1>
+        <form action="/blogs/<%= blog._id %>?_method=PUT" method="post">
+            <div class="form-group row justify-content-center">
+                <div class="col-lg-6">
+                    <input type="text" name="blog[title]" class="form-control form-control-sm" placeholder="blog title"
+                        required value="<%= blog.title %>">
+                </div>
+            </div>
+            <div class="form-group row justify-content-center">
+                <div class="col-lg-6">
+                    <input type="text" name="blog[image]" class="form-control form-control-sm"
+                        placeholder="blog image link" required value="<%= blog.image %>">
+                </div>
+            </div>
+            <div class="form-group row justify-content-center">
+                <div class="col-lg-6">
+                    <textarea class="form-control form-control-sm" name="blog[body]"
+                        placeholder="Blog content goes here :" rows="5"><%=blog.body%></textarea>
+                </div>
+            </div>
+            <div class="row justify-content-center mb-3">
+            <a href="/blogs/<%= blog._id %>">
+                <div class="col-md-8">
+                <button class="btn btn-primary">
+                    Go Back!
+                </button>
+            </a>
+            <button type="submit" class="btn btn-warning">Save and Continue</button>
+            </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<%- include("./partials/footer") %>

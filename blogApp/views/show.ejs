@@ -1,0 +1,40 @@
+<%- include("./partials/header") %>
+
+<div class="container text-center py-5">
+    <h1>
+        <%= blog.title.toUpperCase() %>
+    </h1>
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-11 m-3">
+            <img src="<%= blog.image %>" alt="blog image" class="img-fluid">
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-9 col-11">
+            <h4>
+                <%- blog.body %>
+            </h4>
+        </div>
+    </div>
+    <p>
+        Created-
+        <%= blog.created.toDateString() %>
+    </p>
+    <a href="/blogs">
+        <button class="btn btn-primary">
+            Go Back
+        </button>        
+    </a>
+    <a href="/blogs/<%= blog._id %>/edit">
+        <button class="btn btn-warning">
+            Edit Blog
+        </button>
+    </a>
+    <form action="/blogs/<%= blog._id %>?_method=DELETE" id="delete" method="POST">
+        <button class="btn btn-danger">
+            Delete
+        </button>
+    </form>
+</div>
+
+<%- include("./partials/footer") %>

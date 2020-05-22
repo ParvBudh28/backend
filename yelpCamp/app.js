@@ -1,21 +1,15 @@
-const   express=        require('express'),
-        app=            express(),
-        bodyParser=     require('body-parser'),
-        mongoose=       require('mongoose');
-        
+const   express     =require('express'),
+        app         =express(),
+        bodyParser  =require('body-parser'),
+        mongoose    =require('mongoose'),
+        Campground  =require('./models/campground');
+
+// app config
 mongoose.connect('mongodb://localhost/yelpCamp');
 app.use(bodyParser.urlencoded({ extended: true }))
-
-var campgroundSchema=new mongoose.Schema({
-    name:String,
-    image: String,
-    desc: String
-});
-
-var Campground=mongoose.model("Campground",campgroundSchema);
-
 app.set('view engine','ejs');
 
+// routes 
 app.get("/",function(req,res){
     res.render("landing");
 });
