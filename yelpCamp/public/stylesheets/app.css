@@ -1,0 +1,31 @@
+.authentication{
+    color: white;
+}
+.authentication:hover{
+    color: rgb(224, 224, 224);
+    text-decoration: none;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    color: white;
+}
+
+svg{
+    font-size: 1.5rem;
+}
+
+.navbar-brand{
+    font-size: 1.5rem;
+}
+
+button.navbar-toggler{
+    outline: none;
+}
+
+span.navbar-toggler-icon{
+    color: white;
+}
+
+.navbar-dark .navbar-toggler{
+    color: white;
+}
