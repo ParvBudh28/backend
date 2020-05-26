@@ -8,6 +8,7 @@ const   express         =require('express'),
         LocalStrategy   =require('passport-local'),
         User            =require('./models/user'),
         session         =require('express-session'),
+        methodOverride   =require('method-override'),
         seedsDB         =require('./seeds');
 
 var campgroundRoutes    =require('./routes/campgrounds'),
@@ -18,6 +19,7 @@ var campgroundRoutes    =require('./routes/campgrounds'),
 mongoose.connect('mongodb://localhost/yelpCamp');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("./public"));
+app.use(methodOverride('_method'));
 app.set('view engine','ejs');
 
 app.use(session({
