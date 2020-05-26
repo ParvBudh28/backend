@@ -4,7 +4,12 @@
     <img src="<%= campground.image %>" class="img-fluid" alt="camp image">
     <p class="my-2">
         <h4 class="d-inline">Description - </h3>
-            <%= campground.desc %>
+            <%- campground.desc %>
+    </p>
+    <p>
+        <em>
+            ~~Created by <strong> <%= campground.author.username %> </strong>
+        </em>
     </p>
     
     <a href="/campgrounds" class="btn btn-info">View Campgrounds</a>
@@ -16,7 +21,7 @@
         <p>
             <%= comment.text %> -
             <strong>
-                <%= comment.author %>
+                <%= comment.author.username %>
             </strong>
         </p>
         <% }); %>
